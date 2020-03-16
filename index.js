@@ -14,7 +14,30 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  // write your code here
+  var txt=`In your cart, you have`
+  if(cart === undefined || cart.length === 0)
+  return "Your shopping cart is empty."
+
+  for (var i = 0 ; i < cart.length; i++){
+
+  if (cart.length === 1){
+      txt= txt + ` ${cart[i].itemName} at $${cart[i].itemPrice}`
+  return `In your cart, you have ${cart[i].itemName} at $${cart[i].itemPrice}.`
+  }
+
+  var next = ` ${cart[i].itemName} at $${cart[i].itemPrice},`
+
+
+  if (i === cart.length - 1 ){
+      next = ` and ${cart[i].itemName} at $${cart[i].itemPrice}.`
+  }
+
+
+  txt = txt + next
+
+  }
+
+  return txt
 }
 
 function total() {
