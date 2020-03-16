@@ -53,18 +53,19 @@ function total() {
 }
 
 function removeFromCart(item) {
-  for (var i = 0; i < cart.length; i++) {
+  // write your code here
+  for (var i = 0; i < cart.length; i++)
+  {
 
-    if(cart[i].itemName === item) {
+    if(cart[i].itemName === item)
     cart.splice(i, item)
-}
 
-     if (cart[(cart.length) - 1 ].itemName !=item) {
+
+     if (cart[(cart.length) - 1 ].itemName !=item)
      return 'That item is not in your cart.'
-   }
   }
-
 }
+
 
 function placeOrder(cardNumber) {
   if (cardNumber === undefined || cardNumber.length === 0 )
