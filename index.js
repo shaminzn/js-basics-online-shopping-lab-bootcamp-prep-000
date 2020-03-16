@@ -11,7 +11,6 @@ function setCart(c) {
 
 function addToCart(item) {
  // write your code here
- //var cart = [];
  var object = {};
  object.itemName = item;
  object.itemPrice = Math.floor(Math.random() * 100) + 1;
@@ -69,7 +68,6 @@ function placeOrder(cardNumber) {
   if(!cardNumber) {
     return "Sorry, we don't have a credit card on file for you."
   } else {
-    //let total = total();
     let string = `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`;
     cart = [];
     return string;
